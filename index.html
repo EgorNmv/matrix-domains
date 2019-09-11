@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Matrix-Domains</title>
+</head>
+<body>
+    <main>
+        <aside class="left-side">
+            <div class="left-side__narea">
+                Число строк: &#8595;<br>
+                <input type="text" id="n" placeholder = "Число от 1 до 40" onkeyup = "return enterValidData(this);"  name="count-of-rows" min="1" max="40" maxlength="2" required>
+            </div>
+            <div class="left-side__marea">
+                Число столбцов: &#8595;<br>
+                <input type="text" id="m" placeholder = "Число от 1 до 40" onkeyup = "return enterValidData(this);"  name="count-of-column" min="1" max="40" maxlength="2" required>
+            </div>
+            <div class="left-side__show-button">
+                <button name="show-button" onclick = "displayMatrix()">Отобразить матрицу</button>
+            </div>
+            <div class="left-side__score-button">
+                <button  class="" name="score-button" onclick = "calculationOfDomains()">Посчитать количество доменов</button>
+            </div>
+        </aside>
+        <section class="base">
+            <div class="base__matrix">
+                Матрица &#8595;
+                <table id="base__matrix-table"></table>
+            </div>
+            <div class="base__answer-text">Количество доменов: &#8629;</div>
+            <div class="base__answer" id="answer"></div>
+            <div class="base__table">
+                Таблица	&#8595;
+                <table id="base__table-table">
+                    <tr>
+                        <th>Вероятность выпадения еденицы</th>
+                        <th>Количество доменов в матрице</th>
+                        <th>Количество ячеек в матрице (N*M)</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <aside class="right-side">
+            <div class="right-side__probability-area">
+                Вероятность выпадения еденицы: &#8629;<br>
+                <input type="text" id="probability_of_1" placeholder = "Число от 0.01 до 0.99" onkeyup = "return enterValidDataForAuto(this);" name="count-of-rows" maxlength="4">
+            </div>
+            <div class="right-side__auto-button">
+                <button name="auto-button" id="auto-button" onclick="autoCalculation()">ABTO</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
